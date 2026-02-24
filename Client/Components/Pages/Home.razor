@@ -40,15 +40,22 @@
         </div>
 
         <div class="input-bar">
-            <input @bind="CurrentMessage"
-                @bind:event="oninput"
-                @onkeydown="HandleKeyDown"
-                placeholder="@(awaitingApproval 
-                ? "Please approve or deny the request above..." 
-                : "Type a message...")"
-                class="chat-input"
-                disabled="@awaitingApproval" />
-            <input type="button" @onclick="SendMessage" value="Send" disabled="@awaitingApproval"/>
-        </div>
+    <div class="input-wrapper">
+        <input @bind="CurrentMessage"
+               @bind:event="oninput"
+               @onkeydown="HandleKeyDown"
+               placeholder="@(awaitingApproval 
+               ? "Please approve or deny the request above..." 
+               : "Type a message...")"
+               class="chat-input"
+               disabled="@awaitingApproval" />
+
+        <button class="send-btn"
+                @onclick="SendMessage"
+                disabled="@awaitingApproval">
+            ➤
+        </button>
+    </div>
+</div>
     </div>
 </div>
