@@ -24,7 +24,7 @@ namespace Client.Tools
 
             File.WriteAllText(filePath, content);
 
-            return $"http://localhost:5193/output/{filename}";
+            return $"/output/{filename}";
         }
 
         [Description("Toggle verbose logging on or off.")]
