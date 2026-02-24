@@ -4,7 +4,7 @@ This demo consists of an AG-UI server hosting an AI agent and a Blazor client th
 
 Follow these steps to run the demo:
 
-1. [Create a GitHub Personal Access Token (PAT)](0.%20GitHub%20Token/README.md)
+1. [Create a GitHub Personal Access Token (PAT)]([0.%20GitHub%20Token/README.md](https://github.com/jasmin-software/dotnet_agui_workshop/tree/main/0.%20GitHub%20Token))
 2. Create a file named `appsettings.Development.json` in the `Server` directory with the following content:
 
 ```json
