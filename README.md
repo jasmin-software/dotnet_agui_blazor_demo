@@ -1,6 +1,6 @@
 # Blazor Demo
 
-This demo consists of an AG-UI server hosting an AI agent and a Blazor client that connects to the server and displays streaming responses from the agent. The agent can call tools to change background color, toggle verbose logging, and request user approval before creating a text file.
+This demo consists of an **AG-UI server hosting an AI agent** and a **Blazor client** that connects to the server and displays streaming responses from the agent. The agent can call tools to change background color, enable/disable verbose logging, and request user approval before creating a text file.
 
 > [!NOTE]
 > You'll need a **GitHub Personal Access Token** (PAT) to run this application.
