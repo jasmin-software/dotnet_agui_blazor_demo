@@ -25,7 +25,7 @@ Follow these steps to run the demo:
 
 ### Option 1: Manually run the server and client
 
-- Open a terminal and navigate in the `Server` directory. Run the following command to start the server:
+- Open a terminal and navigate to the `Server` directory. Run the following command to start the server:
 
 ```bash
 dotnet run --urls http://localhost:5000
