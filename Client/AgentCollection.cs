@@ -4,4 +4,4 @@ namespace Client;
 
 public record AgentCollection(
     ChatClientAgent AssistantAgent,
-    ChatClientAgent RepresentativeAgent);
+    ChatClientAgent FriendlyAgent);

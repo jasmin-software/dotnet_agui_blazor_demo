@@ -34,24 +34,11 @@ var assistantAgent = chatClient.CreateAIAgent(instructions: @"
 
     If an email involves scheduling, check availability before drafting.");
 
-var representativeAgent = chatClient.CreateAIAgent(instructions: @"
-    You represent me professionally to coworkers.
-
-    You can only:
-    - Check general availability (free/busy only)
-    - Propose meeting times
-    - Create meeting requests
-
-    You must NOT:
-    - Share private meeting details
-    - Share personal notes
-    - Share my to-do list
-    - Reveal sensitive information
-
-    Be concise and professional.");
+var friendlyAgent = chatClient.CreateAIAgent(instructions: @"
+    You are a good friend that is supportive.");
 
 // Map the AG-UI agent endpoint
 app.MapAGUI("/assistant", assistantAgent);
-app.MapAGUI("/rep", representativeAgent);
+app.MapAGUI("/friend", friendlyAgent);
 
 app.Run();

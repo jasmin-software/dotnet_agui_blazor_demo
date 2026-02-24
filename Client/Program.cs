@@ -16,7 +16,7 @@ AIFunction toggleVerboseTool = AIFunctionFactory.Create(UserInterfaceTool.Toggle
 
 ChatClientAgent assistantAgent = new AGUIChatClient(httpClient, $"{serverUrl}/assistant").CreateAIAgent(
     tools: [setBackgroundColorTool, approvalRequiredGenerateTextFileTool, toggleVerboseTool]);
-ChatClientAgent representativeAgent = new AGUIChatClient(httpClient, $"{serverUrl}/rep").CreateAIAgent();
+ChatClientAgent friendlyAgent = new AGUIChatClient(httpClient, $"{serverUrl}/friend").CreateAIAgent();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -24,7 +24,7 @@ builder.Services.AddRazorComponents()
 
 builder.Services.AddBlazorBootstrap();
 
-builder.Services.AddSingleton(new AgentCollection(assistantAgent, representativeAgent));
+builder.Services.AddSingleton(new AgentCollection(assistantAgent, friendlyAgent));
 
 
 var app = builder.Build();
