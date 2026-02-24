@@ -38,14 +38,43 @@
 }
 
 .input-bar {
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    background: white;
+    padding: 12px;
+    background: transparent;
     display: flex;
+    gap: 8px;
 }
 
 .chat-input {
-    width: 100%;
-    padding: 10px;
+    flex: 1;
+    padding: 12px 16px;
     font-size: 16px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+
+    color: white;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.chat-input:focus {
+    border-color: rgba(255,255,255,0.5);
+}
+
+input[type="button"] {
+    padding: 12px 18px;
+    border-radius: 999px;
+    border: none;
+
+    background: rgba(255,255,255,0.15);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+input[type="button"]:hover {
+    background: rgba(255,255,255,0.25);
 }

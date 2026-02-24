@@ -46,8 +46,7 @@ Here’s what you can try out with me, your AI assistant:
    - Ask me to **create a text file**. You’ll get the **Approve/Deny buttons** to control whether it actually executes!
 
 ---
-
-Give them a try. Feel free to experiment with combinations of these features!",
+Feel free to experiment with these features!",
                 IsUser = false
             });
     }
