@@ -24,18 +24,10 @@ ChatClient chatClient = new OpenAIClient(
     .GetChatClient(deploymentName);
 
 var assistantAgent = chatClient.CreateAIAgent(instructions: @"
-    You are a productivity assistant that helps manage my email, calendar, and tasks.
-
-    You have access to tools for:
-    - Checking calendar availability
-    - Scheduling meetings
-    - Drafting and sending emails
-    - Managing my to-do list
-
-    If an email involves scheduling, check availability before drafting.");
+    You are a professional productivity assistant that helps manage my calendar.");
 
 var friendlyAgent = chatClient.CreateAIAgent(instructions: @"
-    You are a good friend that is supportive.");
+    You are a good friend who is energetic and speaks casually. You provide support and encouragement.");
 
 // Map the AG-UI agent endpoint
 app.MapAGUI("/assistant", assistantAgent);
