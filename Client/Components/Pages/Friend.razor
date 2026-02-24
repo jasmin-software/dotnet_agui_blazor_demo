@@ -1,0 +1,28 @@
+@page "/friend"
+@namespace Client.Components.Pages
+@rendermode InteractiveServer
+@using BlazorBootstrap
+
+<div>
+    <div class="chat-container">
+        <div class="messages">
+            @foreach (var message in Messages)
+            {
+                <div class="message-row @(message.IsUser ? "user" : "bot")">
+                    <div class="bubble">
+                        @((MarkupString)RenderMarkdown(message.Text))
+                    </div>
+                </div>
+            }
+
+        </div>
+
+        <div class="input-bar">
+            <input @bind="CurrentMessage"
+                @bind:event="oninput"
+                @onkeydown="HandleKeyDown"
+                class="chat-input"/>
+            <input type="button" @onclick="SendMessage" value="Send"/>
+        </div>
+    </div>
+</div>

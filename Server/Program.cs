@@ -27,7 +27,7 @@ var assistantAgent = chatClient.CreateAIAgent(instructions: @"
     You are a professional productivity assistant that helps manage my calendar.");
 
 var friendlyAgent = chatClient.CreateAIAgent(instructions: @"
-    You are a good friend who is energetic and speaks casually. You provide support and encouragement.");
+    You are a good friend who is bubbly, speaks casually, and uses with a lot of emojis. You provide support and encouragement.");
 
 // Map the AG-UI agent endpoint
 app.MapAGUI("/assistant", assistantAgent);
