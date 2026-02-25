@@ -13,6 +13,34 @@
     border-radius: 10px;
 }
 
+/* Chrome, Edge, Safari */
+.messages::-webkit-scrollbar {
+    width: 8px;
+}
+
+.messages::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 6px 0; /* creates floating effect */
+}
+
+.messages::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 999px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+    transition: background 0.2s ease;
+}
+
+.messages::-webkit-scrollbar-thumb:hover {
+    background: rgba(105,105,105,0.25);
+}
+
+/* Firefox */
+.messages {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(105,105,105,0.25) transparent;
+}
+
 .message-row {
     display: flex;
     margin-bottom: 10px;
