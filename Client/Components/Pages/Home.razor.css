@@ -10,6 +10,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .message-row {
@@ -26,15 +27,34 @@
 }
 
 .bubble {
-    max-width: 60%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #e5e5ea;
+    max-width: 70%;
+    padding: 16px 20px;
+    border-radius: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+
+    background: rgba(130,130,130,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: white;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .message-row.user .bubble {
-    background-color: #0078d4;
-    color: white;
+    background: rgba(105, 105, 105, 0.2);
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .input-bar {

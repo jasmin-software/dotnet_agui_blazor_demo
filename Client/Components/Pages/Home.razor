@@ -5,9 +5,9 @@
 
 <Toasts class="p-3" Messages="toastMessages" Placement="ToastsPlacement.BottomLeft" />
 
-<div style="background-color: @(Color ?? "transparent")">
+<div>
     <div class="chat-container">
-        <div class="messages">
+        <div class="messages" style="background-color: @(Color ?? "transparent")">
             @foreach (var message in Messages)
             {
                 <div class="message-row @(message.IsUser ? "user" : "bot")">
@@ -41,7 +41,10 @@
 
         <div class="input-bar">
     <div class="input-wrapper">
-        <input @bind="CurrentMessage"
+        <input 
+               id="chatMessage"
+               name="chatMessage"
+               @bind="CurrentMessage"
                @bind:event="oninput"
                @onkeydown="HandleKeyDown"
                placeholder="@(awaitingApproval 
