@@ -5,7 +5,7 @@ namespace Client.Tools
 {
     internal static class UserInterfaceTool
     {
-        [Description("Change the background color of the chat interface to the specified color.")]
+        [Description("Change the background color of the chat interface to a valid CSS background-color value. Default color is transparent.")]
         public static string ChangeBackgroundColor(string color)
         {
             Home.Color = color;
