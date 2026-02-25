@@ -9,7 +9,7 @@ namespace Client.Tools
         public static string ChangeBackgroundColor(string color)
         {
             Home.Color = color;
-            return $"Console text color changed to {color}.";
+            return $"Background color changed to {color}.";
         }
 
         [Description("Generate a text file with the specified filename and content, and return the URL to the generated file.")]
