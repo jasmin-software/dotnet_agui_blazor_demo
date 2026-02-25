@@ -18,11 +18,21 @@
         </div>
 
         <div class="input-bar">
-            <input @bind="CurrentMessage"
-                @bind:event="oninput"
-                @onkeydown="HandleKeyDown"
-                class="chat-input"/>
-            <input type="button" @onclick="SendMessage" value="Send"/>
-        </div>
+    <div class="input-wrapper">
+        <input 
+               id="chatMessage"
+               name="chatMessage"
+               @bind="CurrentMessage"
+               @bind:event="oninput"
+               @onkeydown="HandleKeyDown"
+               placeholder="Type a message...")"
+               class="chat-input" />
+
+        <button class="send-btn"
+                @onclick="SendMessage">
+            ➤
+        </button>
+    </div>
+</div>
     </div>
 </div>

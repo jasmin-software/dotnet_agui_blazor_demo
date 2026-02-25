@@ -10,6 +10,7 @@
     padding: 20px;
     display: flex;
     flex-direction: column;
+    border-radius: 10px;
 }
 
 .message-row {
@@ -26,26 +27,87 @@
 }
 
 .bubble {
-    max-width: 60%;
-    padding: 10px 15px;
-    border-radius: 15px;
-    background-color: #e5e5ea;
+    max-width: 70%;
+    padding: 16px 20px;
+    border-radius: 22px;
+    font-size: 15px;
+    line-height: 1.6;
+
+    background: rgba(130,130,130,0.15);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.15);
+
+    color: white;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .message-row.user .bubble {
-    background-color: #0078d4;
-    color: white;
+    background: rgba(105, 105, 105, 0.2);
+    border: 1px solid rgba(255,255,255,0.15);
 }
 
 .input-bar {
-    padding: 10px;
-    border-top: 1px solid #ddd;
-    background: white;
+    padding: 16px;
     display: flex;
+    justify-content: center;
+    background: transparent;
+}
+
+.input-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
 }
 
 .chat-input {
     width: 100%;
-    padding: 10px;
+    padding: 14px 50px 14px 18px; /* extra right padding for button */
     font-size: 16px;
+
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 25px;
+
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(10px);
+
+    color: white;
+    outline: none;
+}
+
+.chat-input:focus {
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: all 0.2s ease;
+}
+
+.send-btn {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+
+    border: none;
+    cursor: pointer;
+
+    background: rgba(255,255,255,0.2);
+    color: white;
+    transition: all 0.2s ease;
+}
+
+.send-btn:hover {
+    background: rgba(255,255,255,0.35);
 }
