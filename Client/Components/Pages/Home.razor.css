@@ -75,7 +75,7 @@
     padding: 14px 50px 14px 18px; /* extra right padding for button */
     font-size: 16px;
 
-    border: none;
+    border: 1px solid rgba(255,255,255,0.2);
     border-radius: 25px;
 
     background: rgba(255,255,255,0.08);
@@ -86,7 +86,8 @@
 }
 
 .chat-input:focus {
-    border-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(255,255,255,0.4);
+    transition: all 0.2s ease;
 }
 
 .send-btn {
@@ -114,4 +115,45 @@
 .send-btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+}
+
+/* Container spacing */
+.approval-buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 12px;
+}
+
+/* Base button style */
+.approval-buttons button {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 999px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Approve button */
+.approve-btn {
+    background: rgba(0, 200, 100, 0.7);
+    color: white;
+}
+
+.approve-btn:hover {
+    background: rgba(0, 200, 100, 0.8);
+}
+
+/* Deny button */
+.deny-btn {
+    background: rgba(220, 50, 50, 0.7);
+    color: white;
+}
+
+.deny-btn:hover {
+    background: rgba(220, 50, 50, 0.8);
 }
