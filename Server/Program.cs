@@ -10,6 +10,25 @@ builder.Services.AddHttpClient().AddLogging();
 builder.Services.AddAGUI();
 var app = builder.Build();
 
+app.Use(async (context, next) =>
+{
+    var logger = context.RequestServices
+                        .GetRequiredService<ILoggerFactory>()
+                        .CreateLogger("AGUI.RequestLogger");
+
+    logger.LogInformation(@"    Time: {Time}
+    Request Path: {Path}
+    Request Method: {Method}
+    Response Status Code: {StatusCode}
+    ",
+    DateTime.UtcNow,
+    context.Request.Path, 
+    context.Request.Method, 
+    context.Response.StatusCode);
+
+    await next();
+});
+
 string? apiKey = builder.Configuration["GitHub:Token"];
 string? endpoint = builder.Configuration["GitHub:ApiEndpoint"] ?? "https://models.github.ai/inference";
 string? deploymentName = builder.Configuration["GitHub:Model"] ?? "openai/gpt-4o-mini";
