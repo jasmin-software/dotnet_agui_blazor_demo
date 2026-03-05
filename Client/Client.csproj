@@ -14,8 +14,4 @@
     <PackageReference Include="Microsoft.Agents.AI.AGUI" Version="1.0.0-preview.260108.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Demo.ServiceDefaults\Demo.ServiceDefaults.csproj" />
-  </ItemGroup>
-
 </Project>
